@@ -4,50 +4,50 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(228, 12%, 6%);
-  --foreground: hsl(228, 8%, 95%);
-  --card: hsl(228, 12%, 8%);
-  --card-foreground: hsl(228, 8%, 92%);
-  --popover: hsl(228, 12%, 8%);
-  --popover-foreground: hsl(228, 8%, 92%);
-  --primary: hsl(217, 91%, 60%);
-  --primary-foreground: hsl(228, 8%, 95%);
-  --secondary: hsl(262, 83%, 58%);
-  --secondary-foreground: hsl(228, 8%, 95%);
-  --muted: hsl(228, 12%, 15%);
-  --muted-foreground: hsl(228, 8%, 65%);
-  --accent: hsl(142, 76%, 36%);
-  --accent-foreground: hsl(228, 8%, 95%);
-  --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(228, 8%, 95%);
-  --border: hsl(228, 12%, 18%);
-  --input: hsl(228, 12%, 12%);
-  --ring: hsl(217, 91%, 60%);
-  --chart-1: hsl(217, 91%, 60%);
-  --chart-2: hsl(262, 83%, 58%);
-  --chart-3: hsl(142, 76%, 36%);
-  --chart-4: hsl(0, 84%, 60%);
-  --chart-5: hsl(45, 93%, 47%);
-  --sidebar: hsl(228, 12%, 8%);
-  --sidebar-foreground: hsl(228, 8%, 92%);
-  --sidebar-primary: hsl(217, 91%, 60%);
-  --sidebar-primary-foreground: hsl(228, 8%, 95%);
-  --sidebar-accent: hsl(228, 12%, 15%);
-  --sidebar-accent-foreground: hsl(228, 8%, 65%);
-  --sidebar-border: hsl(228, 12%, 18%);
-  --sidebar-ring: hsl(217, 91%, 60%);
+  --background: hsl(240, 15%, 9%);
+  --foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 15%, 11%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(240, 15%, 11%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(200, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(270, 95%, 65%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 10%, 18%);
+  --muted-foreground: hsl(240, 5%, 70%);
+  --accent: hsl(120, 95%, 50%);
+  --accent-foreground: hsl(240, 15%, 9%);
+  --destructive: hsl(0, 85%, 65%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 10%, 20%);
+  --input: hsl(240, 15%, 13%);
+  --ring: hsl(200, 100%, 50%);
+  --chart-1: hsl(200, 100%, 50%);
+  --chart-2: hsl(270, 95%, 65%);
+  --chart-3: hsl(120, 95%, 50%);
+  --chart-4: hsl(0, 85%, 65%);
+  --chart-5: hsl(45, 95%, 55%);
+  --sidebar: hsl(240, 15%, 11%);
+  --sidebar-foreground: hsl(0, 0%, 95%);
+  --sidebar-primary: hsl(200, 100%, 50%);
+  --sidebar-primary-foreground: hsl(0, 0%, 98%);
+  --sidebar-accent: hsl(240, 10%, 18%);
+  --sidebar-accent-foreground: hsl(240, 5%, 70%);
+  --sidebar-border: hsl(240, 10%, 20%);
+  --sidebar-ring: hsl(200, 100%, 50%);
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
-  --radius: 0.75rem;
-  --shadow-2xs: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00);
-  --shadow-xs: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00);
-  --shadow-sm: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 1px 2px -1px hsl(217, 91%, 60% / 0.00);
-  --shadow: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 1px 2px -1px hsl(217, 91%, 60% / 0.00);
-  --shadow-md: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 2px 4px -1px hsl(217, 91%, 60% / 0.00);
-  --shadow-lg: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 4px 6px -1px hsl(217, 91%, 60% / 0.00);
-  --shadow-xl: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 8px 10px -1px hsl(217, 91%, 60% / 0.00);
-  --shadow-2xl: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00);
+  --radius: 1rem;
+  --shadow-2xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --shadow-xs: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0px 6px 16px -4px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0px 10px 24px -4px rgba(0, 0, 0, 0.1), 0px 8px 8px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0px 20px 32px -4px rgba(0, 0, 0, 0.1), 0px 12px 16px -4px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0px 32px 64px -12px rgba(0, 0, 0, 0.14);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 }
@@ -59,14 +59,18 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    background: linear-gradient(135deg, hsl(228, 12%, 6%) 0%, hsl(228, 15%, 4%) 100%);
+    background: radial-gradient(circle at 20% 50%, rgba(0, 191, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 40% 90%, rgba(0, 255, 127, 0.03) 0%, transparent 40%),
+                linear-gradient(180deg, hsl(240, 15%, 9%) 0%, hsl(240, 18%, 7%) 100%);
     min-height: 100vh;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(262, 83%, 58%), hsl(142, 76%, 36%));
+    background: linear-gradient(135deg, hsl(200, 100%, 50%), hsl(270, 95%, 65%), hsl(120, 95%, 50%));
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -76,31 +80,54 @@
 
   .neural-bg {
     background-image: 
-      radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 25% 25%, rgba(0, 191, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(0, 255, 127, 0.05) 0%, transparent 50%);
   }
 
   .glow-effect {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 
+      0 0 20px rgba(0, 191, 255, 0.2),
+      0 0 40px rgba(138, 43, 226, 0.1),
+      0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   .particle {
     position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(59, 130, 246, 0.6);
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(45deg, rgba(0, 191, 255, 0.8), rgba(138, 43, 226, 0.6));
     border-radius: 50%;
     pointer-events: none;
+    filter: blur(0.5px);
   }
 
   .countdown-digit {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 700;
-    background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(262, 83%, 58%));
+    background: linear-gradient(135deg, hsl(200, 100%, 50%), hsl(270, 95%, 65%));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .section-spacing {
+    @apply py-24 md:py-32;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 }
 

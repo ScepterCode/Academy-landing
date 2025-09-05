@@ -33,25 +33,25 @@ export function Solution({ onEnrollClick }: SolutionProps) {
   ];
 
   return (
-    <section className="py-20 neural-bg" data-testid="solution-section">
-      <div className="container mx-auto px-4 lg:px-6">
-        <div className="max-w-6xl mx-auto">
+    <section className="section-spacing neural-bg" data-testid="solution-section">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-20">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6" data-testid="solution-title">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight" data-testid="solution-title">
               The <span className="gradient-text">AI Automation Revolution</span> is Here
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
               Transform your career by mastering the skills that turn business problems into automated solutions
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

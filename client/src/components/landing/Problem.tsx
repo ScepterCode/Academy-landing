@@ -24,25 +24,25 @@ export function Problem() {
   ];
 
   return (
-    <section className="py-20 bg-card/20" data-testid="problem-section">
-      <div className="container mx-auto px-4 lg:px-6">
-        <div className="max-w-6xl mx-auto">
+    <section className="section-spacing bg-card/10" data-testid="problem-section">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-16">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6" data-testid="problem-title">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight" data-testid="problem-title">
               African Businesses Are <span className="text-destructive">Bleeding Money</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
               While the world embraces AI automation, African businesses lose thousands monthly to manual processes
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8">
             {problems.map((problem, index) => (
               <motion.div
                 key={index}
@@ -50,17 +50,17 @@ export function Problem() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-colors"
+                className="glass-card rounded-3xl p-10 hover-lift group"
                 data-testid={`problem-card-${index}`}
               >
-                <div className="w-16 h-16 bg-destructive/20 rounded-xl flex items-center justify-center mb-6">
-                  <problem.icon className="text-destructive text-2xl h-8 w-8" />
+                <div className="w-20 h-20 bg-destructive/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                  <problem.icon className="text-destructive text-3xl h-10 w-10" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">{problem.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
+                <h3 className="text-2xl font-bold mb-6">{problem.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
                   {problem.description}
                 </p>
-                <div className="text-sm text-destructive font-semibold">
+                <div className="text-lg text-destructive font-bold bg-destructive/10 rounded-xl px-4 py-3">
                   Cost: {problem.cost}
                 </div>
               </motion.div>
@@ -73,14 +73,14 @@ export function Problem() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-destructive/10 to-destructive/5 rounded-2xl p-8 text-center border border-destructive/20"
+            className="bg-gradient-to-r from-destructive/15 to-destructive/5 rounded-3xl p-12 text-center border border-destructive/30 hover-lift"
             data-testid="reality-check"
           >
-            <h3 className="text-2xl font-bold text-destructive mb-4">The Reality Check</h3>
-            <p className="text-lg text-muted-foreground mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold text-destructive mb-8">The Reality Check</h3>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
               While African businesses lose $7,000+ monthly to inefficiency, their competitors are automating and scaling 10x faster
             </p>
-            <div className="text-4xl font-black text-destructive">
+            <div className="text-5xl md:text-6xl font-black text-destructive">
               $84,000+ Lost Annually Per Business
             </div>
           </motion.div>

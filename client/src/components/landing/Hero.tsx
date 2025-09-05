@@ -15,39 +15,40 @@ export function Hero({ onEnrollClick, onVideoClick }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center neural-bg overflow-hidden" data-testid="hero-section">
       {/* Dynamic particles background */}
-      <div className="absolute inset-0 opacity-30">
-        {[...Array(5)].map((_, i) => (
+      <div className="absolute inset-0 opacity-40">
+        {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
             className="particle"
             style={{
-              top: `${20 + i * 20}%`,
-              left: `${10 + i * 15}%`,
+              top: `${15 + i * 12}%`,
+              left: `${8 + i * 11}%`,
             }}
             animate={{
-              y: [0, -20, 0],
+              y: [0, -30, 0],
+              x: [0, 10, 0],
             }}
             transition={{
-              duration: 6,
+              duration: 8,
               repeat: Infinity,
-              delay: i * 1.2,
+              delay: i * 1.5,
             }}
           />
         ))}
       </div>
       
-      <div className="container mx-auto px-4 lg:px-6 text-center relative z-10">
-        <div className="max-w-5xl mx-auto">
+      <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-6xl mx-auto space-y-12">
           {/* Limited spots badge */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center bg-muted/50 rounded-full px-4 py-2 mb-8 border border-border"
+            className="inline-flex items-center glass-card rounded-full px-6 py-3 mb-12 hover-lift"
             data-testid="limited-spots-badge"
           >
-            <div className="w-2 h-2 bg-accent rounded-full animate-pulse mr-2"></div>
-            <span className="text-sm font-medium">Limited to 50 Students Only</span>
+            <div className="w-3 h-3 bg-accent rounded-full animate-pulse mr-3"></div>
+            <span className="text-sm font-semibold tracking-wide">Limited to 50 Students Only</span>
           </motion.div>
 
           {/* Main headline */}
@@ -55,12 +56,12 @@ export function Hero({ onEnrollClick, onVideoClick }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tight"
             data-testid="hero-headline"
           >
             Master <span className="gradient-text">AI Automations</span><br/>
             & Build a <span className="gradient-text">6-Figure Career</span><br/>
-            <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">in 30 Days</span>
+            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-muted-foreground mt-4 block">in 30 Days</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -68,7 +69,7 @@ export function Hero({ onEnrollClick, onVideoClick }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-2xl md:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed font-light"
             data-testid="hero-subtitle"
           >
             Transform African businesses with AI solutions that save and generate thousands of dollars monthly
@@ -79,10 +80,10 @@ export function Hero({ onEnrollClick, onVideoClick }: HeroProps) {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-card/50 rounded-2xl p-6 mb-8 border border-border backdrop-blur-sm max-w-md mx-auto"
+            className="glass-card rounded-3xl p-8 mb-12 hover-lift max-w-lg mx-auto"
             data-testid="countdown-container"
           >
-            <p className="text-sm text-muted-foreground mb-4">Early Bird Pricing Ends In:</p>
+            <p className="text-lg text-muted-foreground mb-6 font-medium">Early Bird Pricing Ends In:</p>
             <CountdownTimer targetDate={countdownTarget} />
           </motion.div>
 

@@ -26,9 +26,9 @@ export function Pricing({ onEnrollClick, onPaymentPlanClick }: PricingProps) {
   ];
 
   return (
-    <section id="pricing" className="py-20 neural-bg" data-testid="pricing-section">
-      <div className="container mx-auto px-4 lg:px-6">
-        <div className="max-w-6xl mx-auto">
+    <section id="pricing" className="section-spacing neural-bg" data-testid="pricing-section">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-16">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
