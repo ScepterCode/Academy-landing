@@ -34,10 +34,10 @@ export function Problem() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight" data-testid="problem-title">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 leading-tight" data-testid="problem-title">
               African Businesses Are <span className="text-destructive">Bleeding Money</span>
             </h2>
-            <p className="text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               While the world embraces AI automation, African businesses lose thousands monthly to manual processes
             </p>
           </motion.div>

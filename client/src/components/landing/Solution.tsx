@@ -43,10 +43,10 @@ export function Solution({ onEnrollClick }: SolutionProps) {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight" data-testid="solution-title">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 leading-tight" data-testid="solution-title">
               The <span className="gradient-text">AI Automation Revolution</span> is Here
             </h2>
-            <p className="text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Transform your career by mastering the skills that turn business problems into automated solutions
             </p>
           </motion.div>

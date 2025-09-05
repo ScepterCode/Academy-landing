@@ -56,12 +56,12 @@ export function Hero({ onEnrollClick, onVideoClick }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tight"
+            className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight"
             data-testid="hero-headline"
           >
             Master <span className="gradient-text">AI Automations</span><br/>
             & Build a <span className="gradient-text">6-Figure Career</span><br/>
-            <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-muted-foreground mt-4 block">in 30 Days</span>
+            <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-muted-foreground mt-4 block">in 30 Days</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -69,7 +69,7 @@ export function Hero({ onEnrollClick, onVideoClick }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-2xl md:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed font-light"
+            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
             data-testid="hero-subtitle"
           >
             Transform African businesses with AI solutions that save and generate thousands of dollars monthly
