@@ -19,18 +19,16 @@ app.use((req, res, next) => {
 
   res.on("finish", () => {
     const duration = Date.now() - start;
-    if (path.startsWith("/api")) {
-      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
-      if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
-      }
-
-      if (logLine.length > 80) {
-        logLine = logLine.slice(0, 79) + "…";
-      }
-
-      log(logLine);
+    let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
+    if (capturedJsonResponse) {
+      logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
     }
+
+    if (logLine.length > 200) {
+      logLine = logLine.slice(0, 199) + "…";
+    }
+
+    log(logLine);
   });
 
   next();
@@ -61,11 +59,18 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || '5000', 10);
-  server.listen({
+  const host = process.env.HOST || '127.0.0.1';
+  const listenOptions: any = {
     port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
+    host,
+  };
+  // reusePort is not supported on Windows and will throw ENOTSUP
+  if (process.platform !== "win32") {
+    (listenOptions as Record<string, unknown>).reusePort = true;
+  }
+
+  server.listen(listenOptions, () => {
+    const url = `http://${host}:${port}`;
+    log(`serving at ${url}`);
   });
 })();
