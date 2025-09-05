@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(228, 12%, 6%);
+  --foreground: hsl(228, 8%, 95%);
+  --card: hsl(228, 12%, 8%);
+  --card-foreground: hsl(228, 8%, 92%);
+  --popover: hsl(228, 12%, 8%);
+  --popover-foreground: hsl(228, 8%, 92%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(228, 8%, 95%);
+  --secondary: hsl(262, 83%, 58%);
+  --secondary-foreground: hsl(228, 8%, 95%);
+  --muted: hsl(228, 12%, 15%);
+  --muted-foreground: hsl(228, 8%, 65%);
+  --accent: hsl(142, 76%, 36%);
+  --accent-foreground: hsl(228, 8%, 95%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(228, 8%, 95%);
+  --border: hsl(228, 12%, 18%);
+  --input: hsl(228, 12%, 12%);
+  --ring: hsl(217, 91%, 60%);
+  --chart-1: hsl(217, 91%, 60%);
+  --chart-2: hsl(262, 83%, 58%);
+  --chart-3: hsl(142, 76%, 36%);
+  --chart-4: hsl(0, 84%, 60%);
+  --chart-5: hsl(45, 93%, 47%);
+  --sidebar: hsl(228, 12%, 8%);
+  --sidebar-foreground: hsl(228, 8%, 92%);
+  --sidebar-primary: hsl(217, 91%, 60%);
+  --sidebar-primary-foreground: hsl(228, 8%, 95%);
+  --sidebar-accent: hsl(228, 12%, 15%);
+  --sidebar-accent-foreground: hsl(228, 8%, 65%);
+  --sidebar-border: hsl(228, 12%, 18%);
+  --sidebar-ring: hsl(217, 91%, 60%);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --radius: 0.75rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 1px 2px -1px hsl(217, 91%, 60% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 1px 2px -1px hsl(217, 91%, 60% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 2px 4px -1px hsl(217, 91%, 60% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 4px 6px -1px hsl(217, 91%, 60% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00), 0px 8px 10px -1px hsl(217, 91%, 60% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(217, 91%, 60% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background: linear-gradient(135deg, hsl(228, 12%, 6%) 0%, hsl(228, 15%, 4%) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(262, 83%, 58%), hsl(142, 76%, 36%));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 8s ease infinite;
+  }
+
+  .neural-bg {
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(59, 130, 246, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .countdown-digit {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(262, 83%, 58%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+  animation: gradient 8s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
