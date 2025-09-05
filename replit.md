@@ -2,7 +2,7 @@
 
 ## Overview
 
-AI Automation Academy is a comprehensive educational platform for training professionals in AI automation skills. The project is a full-stack web application built as a landing page and course enrollment system, designed to market and sell AI automation bootcamps targeted at African professionals. The application features a modern, responsive design with course information, success stories, pricing, and enrollment functionality.
+AI Automation Academy is a comprehensive educational platform for training professionals in technology skills across multiple disciplines. The project is a full-stack web application built as a multi-page academy website featuring the complete academy ecosystem rather than focusing solely on a single bootcamp. The application showcases various technology programs including AI automation, data science, cloud engineering, product management, digital marketing, and cybersecurity. The site features a modern, clean design inspired by Google's design aesthetic with professional course information, academy values, leadership team, and comprehensive enrollment functionality.
 
 ## User Preferences
 
@@ -51,11 +51,19 @@ The application uses a simple but effective schema with three main entities:
 - **Path Aliases**: Clean import paths using TypeScript path mapping
 
 ### Component Architecture
-The landing page is built with a modular component structure:
+The academy website is built with a modular component structure:
 - **Reusable UI Components**: Button, Dialog, Form, Input, Select, etc.
-- **Landing Page Sections**: Hero, Problem, Solution, Curriculum, Success Stories, Pricing, FAQ, etc.
-- **Custom Hooks**: Countdown timer, mobile detection, toast notifications
-- **Form Components**: Enrollment and consultation forms with validation
+- **Page Components**: Home, About, Programs, Contact, Program Details
+- **Navigation Component**: Modern responsive navigation with dropdowns and animations
+- **Custom Hooks**: Form validation, toast notifications, API mutations
+- **Form Components**: Enrollment and consultation forms with comprehensive validation
+
+### Page Structure
+- **Home (/)**: Academy overview, featured programs, mission, and stats
+- **About (/about)**: Academy history, values, leadership team, and locations
+- **Programs (/programs)**: Complete program catalog with detailed information
+- **Program Details (/programs/ai-automation)**: Detailed AI Automation Bootcamp page with enrollment
+- **Contact (/contact)**: Contact information, inquiry forms, and office locations
 
 ## External Dependencies
 
