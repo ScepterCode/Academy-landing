@@ -265,7 +265,7 @@ export default function Programs() {
                       </div>
                       <Button asChild className={program.featured ? "bg-blue-600 hover:bg-blue-700" : ""}>
                         <Link href={`/programs/${program.id}`}>
-                          Learn More
+                          Apply Now
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>

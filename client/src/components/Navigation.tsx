@@ -12,15 +12,18 @@ export function Navigation() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+    { name: "AI Automation", href: "/programs/ai-automation" },
     { 
       name: "Programs", 
       href: "/programs",
       hasDropdown: true,
       dropdownItems: [
         { name: "All Programs", href: "/programs" },
-        { name: "AI Automation Bootcamp", href: "/programs/ai-automation" },
         { name: "Data Science", href: "/programs/data-science" },
-        { name: "Cloud Engineering", href: "/programs/cloud-engineering" }
+        { name: "Cloud Engineering", href: "/programs/cloud-engineering" },
+        { name: "Product Management", href: "/programs/product-management" },
+        { name: "Digital Marketing", href: "/programs/digital-marketing" },
+        { name: "Cybersecurity", href: "/programs/cybersecurity" }
       ]
     },
     { name: "Contact", href: "/contact" }
@@ -100,7 +103,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2">
-              <Link href="/programs/ai-automation">Get Started</Link>
+              <Link href="/programs">Get Started</Link>
             </Button>
           </div>
 
@@ -157,7 +160,7 @@ export function Navigation() {
                 ))}
                 <div className="pt-4 border-t border-gray-100">
                   <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                    <Link href="/programs/ai-automation" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="/programs" onClick={() => setIsMobileMenuOpen(false)}>
                       Get Started
                     </Link>
                   </Button>

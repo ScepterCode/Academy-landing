@@ -9,6 +9,11 @@ import About from "@/pages/about";
 import Programs from "@/pages/programs";
 import Contact from "@/pages/contact";
 import AIAutomationBootcamp from "@/pages/programs/ai-automation";
+import DataScienceCertification from "@/pages/programs/data-science";
+import CloudEngineeringTrack from "@/pages/programs/cloud-engineering";
+import ProductManagement from "@/pages/programs/product-management";
+import DigitalMarketingMastery from "@/pages/programs/digital-marketing";
+import CybersecurityFundamentals from "@/pages/programs/cybersecurity";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +25,11 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/programs" component={Programs} />
         <Route path="/programs/ai-automation" component={AIAutomationBootcamp} />
+        <Route path="/programs/data-science" component={DataScienceCertification} />
+        <Route path="/programs/cloud-engineering" component={CloudEngineeringTrack} />
+        <Route path="/programs/product-management" component={ProductManagement} />
+        <Route path="/programs/digital-marketing" component={DigitalMarketingMastery} />
+        <Route path="/programs/cybersecurity" component={CybersecurityFundamentals} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>

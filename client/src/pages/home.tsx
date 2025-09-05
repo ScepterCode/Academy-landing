@@ -138,7 +138,7 @@ export default function Home() {
                     </div>
                   </div>
                   <Button asChild variant="outline" className="w-full">
-                    <Link href={program.link}>Learn More</Link>
+                    <Link href={program.link}>Apply Now</Link>
                   </Button>
                 </motion.div>
               ))}
